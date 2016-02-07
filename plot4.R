@@ -9,6 +9,8 @@ data$Datetime <- as.POSIXct(datetime)
 
 #Plot - 4
 
+png("plot4.png",width=480,height=480)
+
 par(mfrow = c(2,2), mar = c(4,4,1,1),oma = c(0,0,1,0))
 with (data, {
   plot(data$Global_active_power ~ data$Datetime, type = "l",ylab = "Global Active Power (kilowatts)", xlab = "")
@@ -25,6 +27,7 @@ with (data, {
   
 })
 
+dev.off()
 
 
 
